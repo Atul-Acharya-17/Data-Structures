@@ -11,6 +11,7 @@ public:
 	Stack();
 	void push(int element);
 	void pop();
+	bool isEmpty();
 	int peek();
 	void traverse();
 	bool search(int element);
