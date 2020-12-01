@@ -12,6 +12,7 @@ public:
 	void dequeue();
 	int peek();
 	void traverse();
+	bool isEmpty();
 	bool search(int element);
 	~Queue();;
 
