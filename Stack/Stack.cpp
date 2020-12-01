@@ -26,13 +26,30 @@ void Stack::traverse() {
 }
 
 void Stack::pop() {
+    if (isEmpty())
+    {
+        cout << "Underflow" << "\n";
+        return;
+
+    }
+    int element = peek();
+    cout << element << " was popped from the stack" << "\n";
     Node* topNode = top;
     top = top->next;
     delete topNode;
+
 }
 
 int Stack::peek() {
+    if (isEmpty())
+    {
+        return NULL;
+    }
     return top->value;
+}
+
+bool Stack::isEmpty() {
+    return top == NULL;
 }
 
 bool Stack::search(int element) {
