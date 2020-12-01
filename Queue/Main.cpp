@@ -12,6 +12,7 @@ int main() {
 
 	do
 	{
+		cout << "\n";
 		cout << "Enter your choice" << "\n";
 		cout << "1.Enqueue" << "\n";
 		cout << "2.Dequeue" << "\n";
@@ -29,16 +30,21 @@ int main() {
 			queue.enqueue(element);
 			break;
 		case 2:
-			element = queue.peek();
 			queue.dequeue();
-			cout << element << " was dequeued" << "\n";
 			break;
 		case 3:
 			queue.traverse();
 			break;
 		case 4:
 			element = queue.peek();
-			cout << element << " is at the head of the queue" << "\n";
+			if (element == NULL)
+			{
+				cout << "Queue is empty" << "\n";
+			}
+			else
+			{
+				cout << element << " is at the head of the queue" << "\n";
+			}
 			break;
 		case 5:
 			cout << "Enter the element to search for" << "\n";
@@ -59,4 +65,5 @@ int main() {
 
 
 	} while (choice != 0);
+	return 0;
 }
