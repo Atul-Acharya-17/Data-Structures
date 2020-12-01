@@ -12,6 +12,7 @@ int main() {
 
 	do
 	{
+		cout << "\n";
 		cout << "Enter your choice" << "\n";
 		cout << "1.Push" << "\n";
 		cout << "2.Pop" << "\n";
@@ -29,16 +30,21 @@ int main() {
 			stack.push(element);
 			break;
 		case 2:
-			element = stack.peek();
 			stack.pop();
-			cout << element << " was popped from the stack" << "\n";
 			break;
 		case 3:
 			stack.traverse();
 			break;
 		case 4:
 			element = stack.peek();
-			cout << element << " is at the top of the stack" << "\n";
+			if (element == NULL)
+			{
+				cout << "Stack is empty" << "\n";
+			}
+			else
+			{
+				cout << element << " is at the top of the stack" << "\n";
+			}
 			break;
 		case 5:
 			cout << "Enter the element to search for" << "\n";
@@ -59,6 +65,5 @@ int main() {
 
 
 	} while (choice != 0);
-	
 	return 0;
 }
