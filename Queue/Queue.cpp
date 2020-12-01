@@ -27,9 +27,12 @@ void Queue::enqueue(int element) {
 
 void Queue::dequeue() {
     Node* ptr = head;
-    if (ptr == NULL)
+    if (ptr == NULL) {
+        cout << "Queue is empty" << "\n";
         return;
-    else if (head == tail)
+    }
+    int element = peek();
+    if (head == tail)
     {
         head = tail = NULL;
         delete ptr;
@@ -39,10 +42,20 @@ void Queue::dequeue() {
         head = head->next;
         delete ptr;
     }
+
+    cout << element << " was deletd fromt the queue" << "\n";
 }
 
 int Queue::peek(){
+    if (isEmpty())
+    {
+        return NULL;
+    }
     return head->value;
+}
+
+bool Queue::isEmpty() {
+    return head == NULL;
 }
 
 void Queue::traverse() {
