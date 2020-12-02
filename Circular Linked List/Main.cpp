@@ -50,7 +50,7 @@ int main() {
 			}
 			else
 			{
-				cout << "Element does not exist in the circular linked lis" << "\n";
+				cout << "Element does not exist in the circular linked list" << "\n";
 			}
 			break;
 		default:
@@ -59,4 +59,5 @@ int main() {
 
 
 	} while (choice != 0);
+	return 0;
 }
