@@ -18,7 +18,8 @@ int main() {
 		cout << "2.Dequeue" << "\n";
 		cout << "3.Traverse" << "\n";
 		cout << "4.Peek" << "\n";
-		cout << "5.Search" << '\n';
+		cout << "5.Search" << "\n";
+		cout << "0.Exit" << "\n";
 
 		cin >> choice;
 
