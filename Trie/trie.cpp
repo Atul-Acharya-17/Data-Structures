@@ -86,6 +86,27 @@ void Trie::traverse(){
     recursiveTraverse(ptr, word);
 }
 
+void Trie::prefix(string word){
+    for (int i=0; i<word.size(); ++i){
+        if (!isalpha(word[i])){
+            cout<<"Invalid Characters"<<'\n';
+            return; 
+        }
+
+        word[i] = tolower(word[i]);
+    }
+
+    Node *ptr = this->root;
+
+    for (int i=0; i<word.size(); ++i){
+        if (ptr->children[word[i] - 97] == nullptr) return;
+
+        ptr = ptr->children[word[i] - 97];
+    }
+
+    recursiveTraverse(ptr, word);
+}
+
 void Trie::remove(string word){
 
     for (int i=0; i<word.size(); ++i){

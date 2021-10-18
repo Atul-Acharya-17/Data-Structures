@@ -18,6 +18,7 @@ int main() {
 		cout << "2.Delete" << "\n";
 		cout << "3.Traverse" << "\n";
 		cout << "4.Search" << "\n";
+        cout << "5.Prefix Search" << "\n";
 		cout << "0.Exit" << "\n";
 
 		cin >> choice;
@@ -44,6 +45,13 @@ int main() {
             found = trie.search(word);
             if (found) cout << "Word found!" <<"\n";
             else cout << "Word not found :(" <<"\n";
+            break;
+
+        case 5:
+            cout << "Enter the prefix" << "\n";
+            cin >> word;
+            cout << "\n";
+            trie.prefix(word);
             break;
 		default:
 			break;

@@ -17,10 +17,10 @@ public:
     void remove(string word);
     void traverse();
     bool search(string word);
+    void prefix(string word);
     void recursiveRemove(Node *ptr, string word, int idx);
     void recursiveTraverse(Node *ptr, string word);
     void recursiveDelete(Node *ptr);
-
     int countChildren(Node *ptr);
 	~Trie();
 };
