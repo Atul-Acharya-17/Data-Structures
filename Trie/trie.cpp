@@ -107,6 +107,33 @@ void Trie::prefix(string word){
     recursiveTraverse(ptr, word);
 }
 
+string Trie::longestPrefix(){
+
+    string prefix = "";
+
+    Node *ptr = root;
+
+    while (true){
+        int count = this->countChildren(ptr);
+        if (count == 1){
+            for (int i=0; i<26; ++i){
+                if (ptr->children[i] != nullptr){
+                    ptr = ptr->children[i];
+                    prefix.push_back(ptr->val);
+                    if (ptr->end){
+                        return prefix;
+                    }
+                    break;
+                }
+            }
+        }
+
+        else{
+            return prefix;
+        }
+    }
+}
+
 void Trie::remove(string word){
 
     for (int i=0; i<word.size(); ++i){

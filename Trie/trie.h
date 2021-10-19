@@ -18,6 +18,7 @@ public:
     void traverse();
     bool search(string word);
     void prefix(string word);
+    string longestPrefix();
     void recursiveRemove(Node *ptr, string word, int idx);
     void recursiveTraverse(Node *ptr, string word);
     void recursiveDelete(Node *ptr);

@@ -19,6 +19,7 @@ int main() {
 		cout << "3.Traverse" << "\n";
 		cout << "4.Search" << "\n";
         cout << "5.Prefix Search" << "\n";
+		cout << "6.Longest Prefix" << "\n";
 		cout << "0.Exit" << "\n";
 
 		cin >> choice;
@@ -53,6 +54,10 @@ int main() {
             cout << "\n";
             trie.prefix(word);
             break;
+
+		case 6:
+			cout << "Longest prefix is: " << trie.longestPrefix() << "\n";
+			break;
 		default:
 			break;
 		}
